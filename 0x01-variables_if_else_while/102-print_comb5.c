@@ -6,6 +6,7 @@
  * Return: Alwyas 0
  */
 
+
 int main(void)
 {
 int i,j,k,l;
@@ -36,6 +37,6 @@ putchar(',');
 }
 }
 putchar('\n');
-return (0);
+return 0;
 }
 
