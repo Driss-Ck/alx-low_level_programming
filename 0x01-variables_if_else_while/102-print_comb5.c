@@ -8,20 +8,30 @@
 
 int main(void)
 {
-int i, j;
-for (i = 0; i <= 99; i++)
+int i,j,k,l;
+for(i=0;i<=9;i++)
 {
-for (j = i; j <= 99; j++)
+for(j=0;j<=9;j++)
 {
-putchar('0' + i / 10);
-putchar('0' + i % 10);
-putchar(' ');
-putchar('0' + j / 10);
-putchar('0' + j % 10);
-if (i != 99 || j != 99)
+for(k=0;k<=9;k++)
+{
+for(l=0;l<=9;l++)
+{
+int num1=i*10+j;
+int num2=k*10+l;
+if(num1<num2)
+{
+putchar('0'+i);
+putchar('0'+j);
+putchar(',');
+putchar('0'+k);
+putchar('0'+l);
+if(num1!=98||num2!=99)
 {
 putchar(',');
-putchar(' ');
+}
+}
+}
 }
 }
 }
