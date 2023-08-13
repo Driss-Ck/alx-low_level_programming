@@ -5,33 +5,28 @@
  *
  * Return: Alwyas 0
  */
+
 int main(void)
 {
-int i,j,k,l;
-for(i=0;i<=9;i++)
+int i,j,comma=0;
+for(i=0;i<=99;i++)
 {
-for(j=0;j<=9;j++)
+for(j=i+1;j<=99;j++)
 {
-for(k=0;k<=9;k++)
-{
-for(l=0;l<=9;l++)
-{
-int num1=i*10+j;
-int num2=k*10+l;
-if(num1<num2)
-{
-putchar('0'+i);
-putchar('0'+j);
-putchar(',');
-putchar('0'+k);
-putchar('0'+l);
-if(num1!=98||num2!=99)
+if(comma)
 {
 putchar(',');
+putchar(' ');
 }
+else
+{
+comma=1;
 }
-}
-}
+putchar((i/10)+'0');
+putchar((i%10)+'0');
+putchar(' ');
+putchar((j/10)+'0');
+putchar((j%10)+'0');
 }
 }
 putchar('\n');
